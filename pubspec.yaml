@@ -1,0 +1,13 @@
+name: cross_settings
+version: 0.1.0
+description: Cross platform key-value stored settings
+author: Alexander James Clarke <ajclarke903@gmail.com>
+homepage: https://github.com/dwaindibbly/cross_settings
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+env:
+  flutter:
+    sdk: flutter
+dependencies:
+  path_provider: ^1.3.0
+  pedantic: ^1.8.0
