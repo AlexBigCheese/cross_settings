@@ -2,3 +2,4 @@ name: cross_settings_example
 version: 0.1.0
 dependencies:
   cross_settings:
+    git: https://github.com/dwaindibbly/cross_settings
