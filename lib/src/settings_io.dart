@@ -18,6 +18,9 @@ class IOSettings implements Settings {
   Future saveSettings(String settingsFile, Map settings) async {
     String pBase = (futureBase != null) ? (await futureBase).path : vmBase;
     File f = File(pBase + Platform.pathSeparator + settingsFile + ".json");
+    if (!(await f.exists())) {
+      await f.create(recursive: true);
+    }
     return f.writeAsString(json.encode(settings));
   }
 }
