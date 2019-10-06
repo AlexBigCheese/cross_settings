@@ -6,6 +6,7 @@ import 'settings_vm.dart' as vm;
 import 'settings.dart';
 
 Settings createSettings(vmBase) {
+  print("doing flutter settings creation");
   if (!(Platform.isIOS || Platform.isAndroid)) return vm.createSettings(vmBase);
   return IOSettings(futureBase: getApplicationDocumentsDirectory());
 }

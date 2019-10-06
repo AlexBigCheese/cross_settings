@@ -2,6 +2,7 @@ import 'dart:io';
 import 'settings_io.dart' hide createSettings;
 
 createSettings(String vmBase) {
+  print("doing vm settings creation");
   if (Platform.isLinux) {
     return IOSettings(
         vmBase: Platform.environment["HOME"] + "/.config/" + vmBase);

@@ -8,9 +8,10 @@ class IOSettings implements Settings {
   IOSettings({this.vmBase, this.futureBase});
   @override
   Future<Map> loadSettings(String settingsFile) async {
+    print("loading $settingsFile");
     String pBase = (futureBase != null) ? (await futureBase).path : vmBase;
     File f = File(pBase + Platform.pathSeparator + settingsFile + ".json");
-    if (!(await f.exists())) return null;
+    if (!(await f.exists())) return {};
     return json.decode(await f.readAsString());
   }
 
