@@ -1,9 +1,7 @@
 // ignore: uri_does_not_exist
 import 'settings_stub.dart'
 // ignore: uri_does_not_exist
-    if (dart.library.io) 'settings_vm.dart'
-// ignore: uri_does_not_exist
-    if (flutter.library.foundation) 'settings_flutter.dart'
+    if (dart.library.io) 'settings_flutter.dart'
 // ignore: uri_does_not_exist
     if (dart.library.html) 'settings_web.dart';
 
