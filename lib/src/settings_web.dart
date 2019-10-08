@@ -9,7 +9,7 @@ class BrowserSettings implements Settings {
     if (window.localStorage.containsKey([settingsFile])) {
       return json.decode(window.localStorage[settingsFile]);
     }
-    return null;
+    return {};
   }
 
   @override
