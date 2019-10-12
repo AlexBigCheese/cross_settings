@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0
+
+* Added `BLoCSettings`
+
 ## 0.1.1
 
 * Done some stuff that maybe fixes the package
