@@ -1,5 +1,5 @@
 name: cross_settings
-version: 0.2.0
+version: 0.2.0+1
 description: Cross platform key-value stored settings (Meaning flutter apps can store settings on all platforms)
 author: Alexander James Clarke <ajclarke903@gmail.com>
 homepage: https://github.com/dwaindibbly/cross_settings
