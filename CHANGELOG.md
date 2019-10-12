@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0+2
+
+* More ignore lines
+
 ## 0.2.0+1
 
 * Added another ignore line.

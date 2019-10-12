@@ -7,7 +7,9 @@ import 'settings.dart';
 class BrowserSettings implements Settings {
   @override
   Future<Map> loadSettings(String settingsFile) async {
+    // ignore: undefined_identifier
     if (window.localStorage.containsKey([settingsFile])) {
+      // ignore: undefined_identifier
       return json.decode(window.localStorage[settingsFile]);
     }
     return {};
@@ -15,6 +17,7 @@ class BrowserSettings implements Settings {
 
   @override
   Future saveSettings(String settingsFile, Map settings) async {
+    // ignore: undefined_identifier
     return window.localStorage[settingsFile] = json.encode(settings);
   }
 }
