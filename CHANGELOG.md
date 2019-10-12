@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0+3
+
+* Whoops! I put `blocSettings` out for you now!
+
 ## 0.2.0+2
 
 * More ignore lines
