@@ -3,8 +3,8 @@ import 'dart:async';
 
 import 'package:cross_settings/cross_settings.dart';
 
-class BLoCSettings implements Settings {
-  final Settings settings;
+class BLoCSettings<T extends Settings> implements Settings {
+  final T settings;
 
   Stream saveStream(String settingsFile) => _saves.stream.where((x) => x.key == settingsFile).map((x) => x.value);
 
@@ -14,7 +14,7 @@ class BLoCSettings implements Settings {
 
   BLoCSettings._(this.settings);
 
-  factory BLoCSettings.fromSettings(settings) {
+  factory BLoCSettings.fromSettings(T settings) {
     if (_prevInstances.any((x) => x.settings == settings)) return _prevInstances.firstWhere((x) => x.settings == settings);
     var bs = BLoCSettings._(settings);
     _prevInstances.add(bs);

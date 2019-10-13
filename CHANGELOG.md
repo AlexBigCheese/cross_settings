@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+* Added `CachedSettings`
+* Added type annotations to `BLoCSettings`
+
 ## 0.2.0+3
 
 * Whoops! I put `blocSettings` out for you now!

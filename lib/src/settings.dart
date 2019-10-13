@@ -6,11 +6,22 @@ import 'settings_stub.dart'
     if (dart.library.html) 'settings_web.dart';
 
 abstract class Settings {
+  static List<Settings> _instances = [];
+
   /// Creates a platform-appropriate [Settings] object
   ///
   /// On the web, uses [BrowserSettings]
   /// On flutter and vm, uses [IOSettings]
-  factory Settings({String vmBase}) => createSettings(vmBase);
+  factory Settings({String vmBase, int instanceSlot = 0}) {
+    instanceSlot ??= 0;
+    if (instanceSlot.isNegative) throw IndexError(instanceSlot, _instances);
+    if (_instances.length > instanceSlot && _instances[instanceSlot] != null) {
+      return _instances[instanceSlot];
+    }
+    var settings = createSettings(vmBase);
+    _instances.add(settings);
+    return settings;
+  }
 
   /// Loads settings from a slot / file
   ///
