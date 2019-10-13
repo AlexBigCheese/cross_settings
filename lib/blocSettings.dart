@@ -3,10 +3,13 @@ import 'dart:async';
 
 import 'package:cross_settings/cross_settings.dart';
 
+/// An implementation of [Settings] that wraps another [Settings] and will update a stream whenever a `settingsFile` is saved to
 class BLoCSettings<T extends Settings> implements Settings {
+  /// The wrapped [Settings] object
   final T settings;
 
-  Stream saveStream(String settingsFile) => _saves.stream.where((x) => x.key == settingsFile).map((x) => x.value);
+  /// Get a stream of saves on a `settingsFile`
+  Stream<Map> saveStream(String settingsFile) => _saves.stream.where((x) => x.key == settingsFile).map((x) => x.value);
 
   static List<BLoCSettings> _prevInstances = [];
 

@@ -4,6 +4,7 @@
 
 * Added `CachedSettings`
 * Added type annotations to `BLoCSettings`
+* Added some more docs.
 
 ## 0.2.0+3
 

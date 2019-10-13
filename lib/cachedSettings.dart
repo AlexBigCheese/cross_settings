@@ -3,11 +3,15 @@ library cross_settings.cached;
 import 'dart:async';
 import 'cross_settings.dart';
 
+/// An implementation of [Settings] that caches and doesn't save directly
 class CachedSettings<T extends Settings> implements Settings {
+  /// The wrapped [Settings] object
   final T settings;
 
+  /// The cached settings
   Map<String,Map> cache = {};
 
+  /// Actually saves all the settings in cache
   Future saveAll() => Future.wait([
     for (var c in cache.entries)
       settings.saveSettings(c.key,c.value)
